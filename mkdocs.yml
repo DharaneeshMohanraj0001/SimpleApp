@@ -1,0 +1,60 @@
+site_name: SimpleApp Documentation
+site_description: "A simple Flask-based full stack web app documented using MkDocs and Sphinx"
+site_author: "Your Name"
+repo_url: "https://github.com/yourusername/simpleApp"
+repo_name: "GitHub"
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.instant
+    - navigation.sections
+    - toc.integrate
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: blue
+      accent: light blue
+  font:
+    text: Roboto
+    code: Fira Code
+
+nav:
+  - Home: index.md
+  - Setup Guide: setup.md
+  - Usage: usage.md
+  - API Reference: api_reference.md
+  - About:
+      - Project Overview: about.md
+      - License: license.md
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - footnotes
+  - meta
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+
+plugins:
+  - search
+  - mkdocs-simple-hooks
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_source: true
+            docstring_style: google
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yourusername/simpleApp
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/yourusername
